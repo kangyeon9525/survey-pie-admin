@@ -9,7 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ListPage />} />
         <Route path="/list" element={<ListPage />} />
-        <Route path="/builder" element={<BuilerPage />} />
+        <Route path="/builder/:surveyId" element={<BuilerPage />} />
       </Routes>
       <ListPage />
     </div>
