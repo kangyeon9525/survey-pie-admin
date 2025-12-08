@@ -11,7 +11,6 @@ function App() {
         <Route path="/list" element={<ListPage />} />
         <Route path="/builder/:surveyId" element={<BuilerPage />} />
       </Routes>
-      <ListPage />
     </div>
   );
 }

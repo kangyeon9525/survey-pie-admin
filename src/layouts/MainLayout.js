@@ -9,6 +9,13 @@ function MainLayout({ selectedKeys, children }) {
     return { padding: 45 };
   }, []);
 
+  const menuItems = [
+    {
+      key: 'list',
+      label: <Link to="/list">설무조사 관리</Link>,
+    },
+  ];
+
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <Sider>
@@ -20,11 +27,12 @@ function MainLayout({ selectedKeys, children }) {
             background: 'rgba(255, 255, 255, 0.3)',
           }}
         />
-        <Menu theme="dark" selectedKeys={selectedKeys} mode="inline">
-          <Menu.Item key="list">
-            <Link to="/list">설무조사 관리</Link>
-          </Menu.Item>
-        </Menu>
+        <Menu
+          theme="dark"
+          selectedKeys={selectedKeys}
+          mode="inline"
+          items={menuItems}
+        />
       </Sider>
       <Layout>
         <Header />
