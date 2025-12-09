@@ -65,7 +65,6 @@ function ListPage() {
         onRow={(record, rowIndex) => {
           return {
             onClick: (event) => {
-              console.log('onClick', record.id);
               navigate(`/builder/${record.id}`);
             },
           };
