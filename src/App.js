@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 
-import BuilerPage from './pages/BuilderPage';
+import BuilderPage from './pages/BuilderPage';
 import ListPage from './pages/ListPage';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ListPage />} />
         <Route path="/list" element={<ListPage />} />
-        <Route path="/builder/:surveyId" element={<BuilerPage />} />
+        <Route path="/builder/:surveyId" element={<BuilderPage />} />
       </Routes>
     </div>
   );
