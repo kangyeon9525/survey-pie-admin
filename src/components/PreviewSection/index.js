@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 
-import { setSelectedQuestionId } from '../../stores/selectedQuestionId/selectedQuetionIdSlice';
+import { setSelectedQuestionId } from '../../stores/selectedQuestionId/selectedQuestionIdSlice';
 import {
   addQuestion,
   deleteQuestion,
