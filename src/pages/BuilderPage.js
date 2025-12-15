@@ -8,6 +8,8 @@ import OptionSection from '../components/OptionSection';
 import PreviewSection from '../components/PreviewSection';
 import MainLayout from '../layouts/MainLayout';
 import fetchSurvey from '../services/fetchSurvey';
+import { setSelectedQuestionId } from '../stores/selectedQuestionId/selectedQuestionIdSlice';
+import { setSurvey } from '../stores/survey/surveySlice';
 
 function BuilderPage() {
   const error = useSelector((state) => state.survey.error);
@@ -16,7 +18,17 @@ function BuilderPage() {
   const params = useParams();
 
   useEffect(() => {
-    dispatch(fetchSurvey(params.surveyId));
+    if (params.surveyId) {
+      dispatch(fetchSurvey(params.surveyId));
+    } else {
+      dispatch(
+        setSurvey({
+          title: '',
+          questions: [],
+        }),
+      );
+      dispatch(setSelectedQuestionId(null));
+    }
   }, [dispatch, params.surveyId]);
 
   if (error) {

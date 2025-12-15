@@ -49,7 +49,7 @@ const detailFieldsMap = {
       type: 'number',
     },
   ],
-  textArea: [
+  textarea: [
     {
       label: 'Placeholder',
       name: 'placeholder',
