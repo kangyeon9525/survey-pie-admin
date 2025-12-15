@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 
 const { Header, Content, Sider } = Layout;
 
-function MainLayout({ selectedKeys, children }) {
+function MainLayout({ selectedKeys, children, padding = 45 }) {
   const contentStyle = useMemo(() => {
-    return { padding: 45 };
-  }, []);
+    return { padding };
+  }, [padding]);
 
   const menuItems = [
     {
