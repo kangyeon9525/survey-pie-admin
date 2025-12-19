@@ -53,8 +53,8 @@ function AddButton({ addQuestion }) {
         placement="right"
         title="Title"
         trigger="click"
-        visible={visible}
-        onVisibleChange={handleVisibleChange}
+        open={visible}
+        onOpenChange={handleVisibleChange}
       >
         <IconButton>
           <PlusCircleOutlined />

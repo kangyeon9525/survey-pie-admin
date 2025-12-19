@@ -13,7 +13,7 @@ function Card({
   isSelected,
 }) {
   return (
-    <CardWrapper isSelected={isSelected}>
+    <CardWrapper $isSelected={isSelected}>
       <Head onClick={onClick}>
         <Title>{title}</Title>
         <Desc>{desc}</Desc>
@@ -53,8 +53,8 @@ const ButtonGroup = styled.div`
   border-radius: 5px;
 `;
 const CardWrapper = styled.div`
-  border: ${({ isSelected }) =>
-    isSelected ? '3px solid blue' : '1px solid #dddddd'};
+  border: ${({ $isSelected }) =>
+    $isSelected ? '3px solid blue' : '1px solid #dddddd'};
   width: 400px;
   margin: 30px auto;
   background: #ffffff;

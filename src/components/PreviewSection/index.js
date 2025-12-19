@@ -11,8 +11,12 @@ import AddButton from '../AddButton';
 import Body from '../Body';
 import Card from '../Card';
 
+const EMPTY_QUESTIONS = [];
+
 function PreviewSection() {
-  const questions = useSelector((state) => state.survey.data?.questions || []);
+  const questions = useSelector(
+    (state) => state.survey.data?.questions ?? EMPTY_QUESTIONS,
+  );
   const selectedQuestionId = useSelector(
     (state) => state.selectedQuestionId.data,
   );
