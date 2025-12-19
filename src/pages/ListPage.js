@@ -80,11 +80,9 @@ function ListPage() {
         </Button>
       </CreateButtonWrapper>
       <Table
-        onRow={(record, rowIndex) => {
+        onRow={(record) => {
           return {
-            onClick: (event) => {
-              navigate(`/builder/${record.id}`);
-            },
+            onClick: () => navigate(`/builder/${record.id}`),
           };
         }}
         pagination={{
@@ -103,6 +101,9 @@ function ListPage() {
   );
 }
 
-const CreateButtonWrapper = styled.div``;
+const CreateButtonWrapper = styled.div`
+  text-align: right;
+  margin-bottom: 25px;
+`;
 
 export default ListPage;

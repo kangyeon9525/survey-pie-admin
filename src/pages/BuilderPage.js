@@ -46,7 +46,7 @@ function BuilderPage() {
           <BuilderTitleInput />
           <PreviewSection />
         </Col>
-        <Col flex="350px">
+        <Col flex="1 0 350px">
           <OptionSection />
         </Col>
       </Row>
